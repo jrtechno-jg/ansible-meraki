@@ -1,5 +1,5 @@
 - name: Query all devices in an organization.
-  cisco.meraki.meraki_device:
+  meraki_device:
     auth_key: '{{ MERAKI_KEY }}'
     org_name: JRTECHNOLOGY
     state: query
