@@ -6,7 +6,7 @@
   - name: Query all devices in an organization.
     connection: localhost
     meraki_device:
-      auth_key: '{{ MERAKI_KEY }}'
+      auth_key: '{{ lookup(env, "MERAKI_KEY") }}'
       org_name: JRTECHNOLOGY
       state: query
     delegate_to: localhost
