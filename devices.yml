@@ -1,7 +1,12 @@
-- name: Query all devices in an organization.
-  connection: localhost
-  cisco.meraki.meraki_device:
-    auth_key: '{{ MERAKI_KEY }}'
-    org_name: JRTECHNOLOGY
-    state: query
-  delegate_to: localhost
+- name: Create a resource group with (Vnet & Subnets)
+  hosts: dashboard.meraki.com
+  gather_facts: no
+  tasks:
+
+  - name: Query all devices in an organization.
+    connection: localhost
+    cisco.meraki.meraki_device:
+      auth_key: '{{ MERAKI_KEY }}'
+      org_name: JRTECHNOLOGY
+      state: query
+    delegate_to: localhost
