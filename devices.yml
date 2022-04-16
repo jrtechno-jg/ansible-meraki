@@ -1,9 +1,9 @@
-- hosts: localhost
-  tasks:
-    - name: Query all devices in an organization.
-      meraki_device:
-        dashboard: dashboard.meraki.com
-        auth_key: '{{ MERAKI_KEY }}'
-        org_name: JRTECHNOLOGY
-        state: query
-      delegate_to: localhost
+- name: Test Meraki playbook
+  connection: local
+  hosts: localhost
+  meraki_device:
+    dashboard: dashboard.meraki.com
+    auth_key: '{{ MERAKI_KEY }}'
+    org_name: JRTECHNOLOGY
+    state: query
+  delegate_to: localhost
