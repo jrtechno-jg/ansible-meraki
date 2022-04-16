@@ -1,4 +1,4 @@
-- name: Create a resource group with (Vnet & Subnets)
+- name: Query all devices in an organization.
   hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
