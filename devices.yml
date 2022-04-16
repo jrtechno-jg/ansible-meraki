@@ -1,5 +1,6 @@
 - name: Query all devices in an organization.
-  meraki_device:
+  connection: localhost
+  cisco.meraki.meraki_device:
     auth_key: '{{ MERAKI_KEY }}'
     org_name: JRTECHNOLOGY
     state: query
