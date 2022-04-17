@@ -5,7 +5,7 @@
   - name: Query all devices in an organization.
     connection: localhost
     meraki_device:
-      auth_key: 
+      auth_key: f87511577efb5960c691d6f6752e9d6b10ddaa05
       org_name: JRTECHNOLOGY
       state: query
     delegate_to: localhost
