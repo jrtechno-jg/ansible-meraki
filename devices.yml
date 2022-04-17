@@ -8,6 +8,6 @@
       auth_key: f87511577efb5960c691d6f6752e9d6b10ddaa05
       state: present
       serial: Q2BX-MWD9-HKGU
-      number: 8
+      number: '8'
       name: Ansible
     delegate_to: localhost
