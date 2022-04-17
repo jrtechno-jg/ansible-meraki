@@ -10,4 +10,6 @@
       state: query
     delegate_to: localhost
     register: out
-  - debug: var=out.stdout_lines
+  - debug: 
+      var: "out.stdout_lines"
+    changed_when: False
