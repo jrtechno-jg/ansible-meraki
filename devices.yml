@@ -2,12 +2,12 @@
   hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
-  - name: Name switchport
+  - name: Name switchport 8 Label
     connection: localhost
     meraki_switchport:
-      auth_key: 
+      auth_key: f87511577efb5960c691d6f6752e9d6b10ddaa05
       state: present
-      serial: ABC-123
-      number: 7
+      serial: Q2BX-MWD9-HKGU
+      number: 8
       name: Ansible
     delegate_to: localhost
