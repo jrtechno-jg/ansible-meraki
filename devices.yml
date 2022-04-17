@@ -6,6 +6,7 @@
     connection: localhost
     meraki_switchport:
       state: present
+      auth_key: '{{ auth_key }}'
       serial: 
       number: '8'
       name: Ansible Test Port
