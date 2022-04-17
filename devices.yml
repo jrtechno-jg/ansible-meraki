@@ -1,10 +1,10 @@
 - name: Name switchport on JRTECHNOLOGY Switch
   hosts: dashboard.meraki.com
   gather_facts: no
-  tasks: '{{ MERAKI_KEY }}'
+  tasks:
   - name: Name switchport 8 Label
     connection: localhost
-    var: 
+    var:  '{{ MERAKI_KEY }}'
     meraki_switchport:
       auth_key: '{{ MERAKI_KEY }}'
       state: present
