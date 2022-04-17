@@ -4,6 +4,8 @@
   tasks:
   - name: Name switchport 8 Label
     connection: localhost
+    vars:
+        auth_key: '{{ MERAKI_KEY }}'
     meraki_switchport:
       auth_key: '{{ MERAKI_KEY }}'
       state: present
