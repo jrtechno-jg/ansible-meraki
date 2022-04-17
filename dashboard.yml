@@ -1,4 +1,3 @@
 all:
   hosts:
     dashboard.meraki.com:
-    api.meraki.com:
