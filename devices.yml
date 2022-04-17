@@ -5,7 +5,7 @@
   - name: Name switchport 8 Label
     connection: localhost
     meraki_switchport:
-      auth_key: "{{ meraki_key }}"
+      auth_key: '{{ MERAKI_KEY }}'
       state: present
       serial: 
       number: '8'
