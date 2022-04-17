@@ -7,7 +7,7 @@
     meraki_switchport:
       auth_key: 
       state: present
-      serial: Q2BX-MWD9-HKGU
+      serial: 
       number: '8'
       name: Ansible Test Port
     delegate_to: localhost
