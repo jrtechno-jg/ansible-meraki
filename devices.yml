@@ -1,14 +1,13 @@
-- name: Job to Query all devices in an organization.
+- name: Name switchport on JRTECHNOLOGY Switch
   hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
-  - name: Query all devices in an organization.
+  - name: Name switchport
     connection: localhost
-    meraki_device:
-      auth_key: f87511577efb5960c691d6f6752e9d6b10ddaa05
-      org_name: JRTECHNOLOGY
-      state: query
+    meraki_switchport:
+      auth_key: 
+      state: present
+      serial: ABC-123
+      number: 7
+      name: Ansible
     delegate_to: localhost
-    register: out
-  - name: debug output size
-    debug: var=out.stdout_lines
