@@ -9,5 +9,5 @@
       org_name: JRTECHNOLOGY
       state: query
     delegate_to: localhost
-   register: out
+    register: out
   - debug: var=out.stdout_lines
