@@ -1,4 +1,4 @@
-- name: Name switchport on JRTECHNOLOGY Switch
+- name: Name Port(8) on SW-JRTECHNO-01
   hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
@@ -9,5 +9,5 @@
       auth_key: '{{ auth_key }}'
       serial: Q2BX-MWD9-HKGU
       number: '8'
-      name: Ansible Test Port 8
+      name: Empty
     delegate_to: localhost
