@@ -9,5 +9,5 @@
       auth_key: '{{ auth_key }}'
       serial: '{{ serial_number }}'
       number: '8'
-      name: Ansible Test Port
+      name: Ansible Test Port 8
     delegate_to: localhost
