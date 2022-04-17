@@ -9,5 +9,5 @@
       state: present
       serial: Q2BX-MWD9-HKGU
       number: '8'
-      name: Ansible
+      name: Ansible Test Port
     delegate_to: localhost
