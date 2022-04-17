@@ -1,4 +1,4 @@
-- name: Name Port(8) on SW-JRTECHNO-01
+- name: SW-JRTECHNO-01 Port(8) Configuration
   hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
