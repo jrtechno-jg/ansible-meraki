@@ -4,8 +4,6 @@
   tasks:
   - name: Name switchport 8 Label
     connection: localhost
-    vars:
-    tower_host: '{{ lookup("env", "MERAKI_KEY") }}'
     meraki_switchport:
       auth_key: "{{ meraki_key }}"
       state: present
