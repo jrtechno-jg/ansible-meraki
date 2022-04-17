@@ -10,6 +10,5 @@
       state: query
     delegate_to: localhost
     register: out
-  - debug: 
-      var: "out.stdout_lines"
-    changed_when: False
+  - name: debug output size
+    debug: var=out.stdout_lines
