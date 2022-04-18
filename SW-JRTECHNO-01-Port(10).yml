@@ -5,14 +5,15 @@
   - name: Port(10) Configuration
     connection: localhost
     meraki_switchport:
-      name: Port(10) - Empty & Disabled
+      name: Port 10 | Free and Disabled
+      state: present
       number: '10'
-      enabled: false
+      enabled: true
       type: trunk
       vlan: 11
       allowed_vlans: all
       isolation_enabled: false
-      rstp_enabled: true
+      rstp_enabled: false
       stp_guard: loop guard
       link_negotiation: Auto negotiate
       auth_key: '{{ auth_key }}'

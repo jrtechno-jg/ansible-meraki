@@ -5,18 +5,18 @@
   - name: Port(7) Configuration
     connection: localhost
     meraki_switchport:
-      name: Port(7) - Empty & Disabled
+      name: Port 7 | Free and Disabled
+      state: present
+      poe_enabled: false
       number: '7'
-      enabled: false
-      poeEnabled: false
+      enabled: true
       type: trunk
       vlan: 11
-      allowedVlans: all
-      isolationEnabled: false
-      rstpEnabled: true
-      stpGuard: loop guard
-      linkNegotiation: Auto negotiate
-      udld: Alert only
+      allowed_vlans: all
+      isolation_enabled: false
+      rstp_enabled: false
+      stp_guard: loop guard
+      link_negotiation: Auto negotiate
       auth_key: '{{ auth_key }}'
       serial: Q2BX-MWD9-HKGU
     delegate_to: localhost
