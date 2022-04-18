@@ -5,18 +5,17 @@
   - name: Port(6) Configuration
     connection: localhost
     meraki_switchport:
-      name: Port 6 | Free and Disabled
+      name: '{{ name }}'
       state: present
-      poe_enabled: false
       number: '6'
-      enabled: false
-      type: trunk
-      vlan: 11
-      allowed_vlans: all
-      isolation_enabled: false
-      rstp_enabled: false
-      stp_guard: loop guard
-      link_negotiation: Auto negotiate
+      enabled: '{{ enabled }}'
+      type: '{{ type }}'
+      vlan: '{{ vlan }}'
+      allowed_vlans: '{{ allowed_vlans }}'
+      isolation_enabled: '{{ isolation_enabled }}'
+      rstp_enabled: '{{ rstp_enabled }}'
+      stp_guard: '{{ stp_guard }}'
+      link_negotiation: '{{ link_negotiation }}'
       auth_key: '{{ auth_key }}'
       serial: '{{ serial_number }}'
     delegate_to: localhost
