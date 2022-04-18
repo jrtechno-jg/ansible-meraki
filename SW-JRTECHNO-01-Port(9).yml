@@ -1,0 +1,14 @@
+- name: SW-JRTECHNO-01 Port(8) Configuration
+  hosts: dashboard.meraki.com
+  gather_facts: no
+  tasks:
+  - name: Name switchport 8 Label
+    connection: localhost
+    meraki_switchport:
+      state: present
+      auth_key: '{{ auth_key }}'
+      serial: Q2BX-MWD9-HKGU
+      number: '9'
+      vlan: 1
+      name: Empty Port
+    delegate_to: localhost
