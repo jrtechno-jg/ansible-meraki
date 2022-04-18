@@ -6,13 +6,14 @@
     connection: localhost
     meraki_switchport:
       name: Free Port
+      state: present
       number: '10'
-      enabled: yes
+      enabled: true
       type: trunk
       vlan: 11
       allowed_vlans: all
-      isolation_enabled: no
-      rstp_enabled: no
+      isolation_enabled: false
+      rstp_enabled: false
       stp_guard: loop guard
       link_negotiation: Auto negotiate
       auth_key: '{{ auth_key }}'
