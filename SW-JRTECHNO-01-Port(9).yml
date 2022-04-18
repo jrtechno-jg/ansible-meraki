@@ -17,5 +17,5 @@
       stp_guard: loop guard
       link_negotiation: Auto negotiate
       auth_key: '{{ auth_key }}'
-      serial: Q2BX-MWD9-HKGU
+      serial: '{{ serial_number }}'
     delegate_to: localhost
