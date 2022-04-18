@@ -7,12 +7,12 @@
     meraki_switchport:
       name: Free Port
       number: '10'
-      enabled: false
+      enabled: no
       type: trunk
       vlan: 11
       allowed_vlans: all
-      isolation_enabled: false
-      rstp_enabled: true
+      isolation_enabled: no
+      rstp_enabled: no
       stp_guard: loop guard
       link_negotiation: Auto negotiate
       auth_key: '{{ auth_key }}'
