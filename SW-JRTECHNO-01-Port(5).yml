@@ -1,5 +1,4 @@
 - name: SW-JRTECHNO-01 Port(5) Configuration
-  hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
   - name: Port(5) Configuration
