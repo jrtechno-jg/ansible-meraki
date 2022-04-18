@@ -5,7 +5,7 @@
   - name: Port(10) Configuration
     connection: localhost
     meraki_switchport:
-      name: Port Free and Disabled
+      name: Port 10 | Free and Disabled
       state: present
       number: '10'
       enabled: true
