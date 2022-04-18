@@ -9,5 +9,5 @@
       auth_key: '{{ auth_key }}'
       serial: Q2BX-MWD9-HKGU
       number: '8'
-      name: Empty
+      name: Ansible Test
     delegate_to: localhost
