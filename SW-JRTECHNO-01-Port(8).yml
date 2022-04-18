@@ -9,7 +9,7 @@
       state: present
       poe_enabled: false
       number: '8'
-      enabled: true
+      enabled: false
       type: trunk
       vlan: 11
       allowed_vlans: all
