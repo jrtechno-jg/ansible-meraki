@@ -15,7 +15,6 @@
       rstp_enabled: true
       stp_guard: loop guard
       link_negotiation: Auto negotiate
-      udld: Alert only
       auth_key: '{{ auth_key }}'
       serial: Q2BX-MWD9-HKGU
     delegate_to: localhost
