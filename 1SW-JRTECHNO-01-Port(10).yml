@@ -7,7 +7,7 @@
     meraki_switchport:
       name: Free Port
       number: '10'
-      enabled: no
+      enabled: yes
       type: trunk
       vlan: 11
       allowed_vlans: all
