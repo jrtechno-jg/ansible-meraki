@@ -1,4 +1,3 @@
-
 - name: SW-JRTECHNO-01 Port(9) Configuration
   hosts: '{{ host }}'
   gather_facts: no
