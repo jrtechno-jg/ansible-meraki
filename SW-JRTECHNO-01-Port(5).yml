@@ -1,0 +1,22 @@
+- name: SW-JRTECHNO-01 Port(5) Configuration
+  hosts: dashboard.meraki.com
+  gather_facts: no
+  tasks:
+  - name: Port(5) Configuration
+    connection: localhost
+    meraki_switchport:
+      name: Samsung SmartThings Hub
+      state: present
+      poe_enabled: false
+      number: '5'
+      enabled: true
+      type: access
+      vlan: 16
+      allowed_vlans:
+      isolation_enabled: false
+      rstp_enabled: false
+      stp_guard: loop guard
+      link_negotiation: Auto negotiate
+      auth_key: '{{ auth_key }}'
+      serial: Q2BX-MWD9-HKGU
+    delegate_to: localhost
