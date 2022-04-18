@@ -12,7 +12,7 @@
       enabled: true
       type: access
       vlan: 16
-      allowed_vlans:
+      allowed_vlans: 16
       isolation_enabled: false
       rstp_enabled: false
       stp_guard: loop guard
