@@ -1,4 +1,5 @@
 - name: SW-JRTECHNO-01 Port(5) Configuration
+  hosts: '{{ hosts }}'
   gather_facts: no
   tasks:
   - name: Port(5) Configuration
