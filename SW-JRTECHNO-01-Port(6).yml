@@ -1,14 +1,22 @@
-- name: SW-JRTECHNO-01 Port(8) Configuration
+- name: SW-JRTECHNO-01 Port(6) Configuration
   hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
-  - name: Name switchport 8 Label
+  - name: Port(6) Configuration
     connection: localhost
     meraki_switchport:
-      state: present
+      name: Port(6) - Empty & Disabled
+      number: '6'
+      enabled: false
+      poeEnabled: false
+      type: trunk
+      vlan: 11
+      allowedVlans: all
+      isolationEnabled: false
+      rstpEnabled: true
+      stpGuard: loop guard
+      linkNegotiation: Auto negotiate
+      udld: Alert only
       auth_key: '{{ auth_key }}'
       serial: Q2BX-MWD9-HKGU
-      number: '6'
-      vlan: 1
-      name: Empty Port
     delegate_to: localhost

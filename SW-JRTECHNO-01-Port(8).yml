@@ -2,13 +2,21 @@
   hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
-  - name: Name switchport 8 Label
+  - name: Port(8) Configuration
     connection: localhost
     meraki_switchport:
-      state: present
+      name: Port(8) - Empty & Disabled
+      number: '8'
+      enabled: false
+      poeEnabled: false
+      type: trunk
+      vlan: 11
+      allowedVlans: all
+      isolationEnabled: false
+      rstpEnabled: true
+      stpGuard: loop guard
+      linkNegotiation: Auto negotiate
+      udld: Alert only
       auth_key: '{{ auth_key }}'
       serial: Q2BX-MWD9-HKGU
-      number: '8'
-      vlan: 1
-      name: Empty Port
     delegate_to: localhost
