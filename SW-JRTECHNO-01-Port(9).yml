@@ -7,7 +7,6 @@
     meraki_switchport:
       name: '{{ name }}'
       state: present
-      poe_enabled: '{{ poe_enabled }}'
       number: '9'
       enabled: '{{ enabled }}'
       type: '{{ type }}'
