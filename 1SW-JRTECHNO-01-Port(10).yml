@@ -1,0 +1,20 @@
+- name: SW-JRTECHNO-01 Port(10) Configuration
+  hosts: dashboard.meraki.com
+  gather_facts: no
+  tasks:
+  - name: Port(10) Configuration
+    connection: localhost
+    meraki_switchport:
+      name: Port(10) - Empty & Disabled
+      number: '10'
+      enabled: false
+      type: trunk
+      vlan: 11
+      allowed_vlans: all
+      isolation_enabled: false
+      rstp_enabled: true
+      stp_guard: loop guard
+      link_negotiation: Auto negotiate
+      auth_key: '{{ auth_key }}'
+      serial: Q2BX-MWD9-HKGU
+    delegate_to: localhost
