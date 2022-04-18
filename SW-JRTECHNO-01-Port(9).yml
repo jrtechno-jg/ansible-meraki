@@ -8,7 +8,7 @@
       name: Port 9 | Free and Disabled
       state: present
       number: '9'
-      enabled: true
+      enabled: false
       type: trunk
       vlan: 11
       allowed_vlans: all
