@@ -5,7 +5,7 @@
   - name: Port(5) Configuration
     connection: localhost
     meraki_switchport:
-      name: Samsung SmartThings Hub - test
+      name: Samsung SmartThings Hub
       state: present
       poe_enabled: false
       number: '5'
