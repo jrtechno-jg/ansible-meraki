@@ -1,12 +1,12 @@
-- name: SW-JRTECHNO-01 Port(9) Configuration
+- name: SW-JRTECHNO-01 Port(10) Configuration
   hosts: dashboard.meraki.com
   gather_facts: no
   tasks:
-  - name: Port(9) Configuration
+  - name: Port(10) Configuration
     connection: localhost
     meraki_switchport:
-      name: Port(9) - Empty & Disabled
-      number: '9'
+      name: Port(10) - Empty & Disabled
+      number: '10'
       enabled: false
       type: trunk
       vlan: 11
