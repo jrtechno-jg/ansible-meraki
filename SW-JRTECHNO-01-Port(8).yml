@@ -1,5 +1,5 @@
 - name: SW-JRTECHNO-01 Port(8) Configuration
-  hosts: dashboard.meraki.com
+  hosts: '{{ host }}'
   gather_facts: no
   tasks:
   - name: Port(8) Configuration
