@@ -13,7 +13,7 @@
     delegate_to: localhost
     register: delete_vlan
     environment:
-      ANSIBLE_MERAKI_FORMAT: snake_case
+      ANSIBLE_MERAKI_FORMAT: snakecase
 
   - debug:
       msg: '{{delete_vlan}}'
