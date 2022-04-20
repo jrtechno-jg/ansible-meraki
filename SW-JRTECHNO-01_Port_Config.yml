@@ -5,7 +5,7 @@
   - name: Port Configuration
     connection: localhost
     meraki_switchport:
-      name: '{{ name }}'
+      name: '{{ interface_name }}'
       state: present
       number: '{{ number }}'
       enabled: '{{ enabled }}'
