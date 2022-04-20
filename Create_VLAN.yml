@@ -1,0 +1,29 @@
+- name: Create VLAN
+  hosts: '{{ host }}'
+  gather_facts: no
+  tasks:
+
+  - name: Create VLAN in '{{net_name}}'
+    meraki_vlan:
+      auth_key: '{{auth_key}}'
+      serial: '{{ serial_number }}'
+      state: present
+      org_name: '{{org_name}}'
+      net_name: '{{net_name}}'
+      vlan_id: '{{vlan_id}}'
+      name: '{{vlan_name}}'
+      subnet: '{{subnet}}'
+      appliance_ip: '{{gateway_ip}}'
+    delegate_to: localhost
+    register: create_vlan
+    environment:
+      ANSIBLE_MERAKI_FORMAT: camelcase
+
+  - debug:
+      msg: '{{create_vlan}}'
+
+  - assert:
+      that:
+        - create_vlan.data.id == '{{vlan_id}}'
+        - create_vlan.changed == True
+        - create_vlan.data.networkId is defined
