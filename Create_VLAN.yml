@@ -7,6 +7,8 @@
     meraki_vlan:
       auth_key: '{{auth_key}}'
       state: present
+      org_name: '{{org_name}}'
+      net_name: '{{net_name}}'
       vlan_id: '{{vlan_id}}'
       name: '{{vlan_name}}'
       subnet: '{{subnet}}'
