@@ -16,13 +16,7 @@
     delegate_to: localhost
     register: create_vlan
     environment:
-      ANSIBLE_MERAKI_FORMAT: snakecase
+      ANSIBLE_MERAKI_FORMAT: snake_case
 
   - debug:
       msg: '{{create_vlan}}'
-
-  - assert:
-      that:
-        - create_vlan.data.id == '{{vlan_id}}'
-        - create_vlan.changed == True
-        - create_vlan.data.networkId is defined
