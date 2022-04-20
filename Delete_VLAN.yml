@@ -3,17 +3,17 @@
   gather_facts: no
   tasks:
 
-- name: Delete a VLAN.
-  meraki_vlan:
-    auth_key: '{{auth_key}}'
-    org_name: '{{org_name}}'
-    net_name: '{{net_name}}'
-    state: absent
-    vlan_id: '{{vlan_id}}'
+  - name: Delete VLAN in '{{net_name}}'
+    meraki_vlan:
+      auth_key: '{{auth_key}}'
+      state: absent
+      org_name: '{{org_name}}'
+      net_name: '{{net_name}}'
+      vlan_id: '{{vlan_id}}'
     delegate_to: localhost
-    register: create_vlan
+    register: delete_vlan
     environment:
       ANSIBLE_MERAKI_FORMAT: snake_case
 
-- debug:
-    msg: '{{create_vlan}}'
+  - debug:
+      msg: '{{delete_vlan}}'
