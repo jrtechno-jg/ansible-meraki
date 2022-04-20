@@ -19,3 +19,9 @@
       auth_key: '{{ auth_key }}'
       serial: '{{ serial_number }}'
     delegate_to: localhost
+    register: port_config
+    environment:
+      ANSIBLE_MERAKI_FORMAT: snakecase
+
+  - debug:
+      msg: '{{port_config}}'
