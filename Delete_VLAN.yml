@@ -11,10 +11,9 @@
     state: absent
     vlan_id: '{{vlan_id}}'
   delegate_to: localhost
-    
-    register: delete_vlan
+    register: create_vlan
     environment:
       ANSIBLE_MERAKI_FORMAT: snake_case
 
   - debug:
-      msg: '{{delete_vlan}}'
+      msg: '{{create_vlan}}'
