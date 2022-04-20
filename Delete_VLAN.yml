@@ -10,10 +10,10 @@
     net_name: '{{net_name}}'
     state: absent
     vlan_id: '{{vlan_id}}'
-  delegate_to: localhost
+    delegate_to: localhost
     register: create_vlan
     environment:
       ANSIBLE_MERAKI_FORMAT: snake_case
 
-  - debug:
-      msg: '{{create_vlan}}'
+- debug:
+    msg: '{{create_vlan}}'
