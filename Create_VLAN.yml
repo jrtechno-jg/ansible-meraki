@@ -6,7 +6,6 @@
   - name: Create VLAN in '{{net_name}}'
     meraki_vlan:
       auth_key: '{{auth_key}}'
-      serial: '{{ serial_number }}'
       state: present
       vlan_id: '{{vlan_id}}'
       name: '{{vlan_name}}'
