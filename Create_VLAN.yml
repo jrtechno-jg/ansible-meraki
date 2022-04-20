@@ -8,8 +8,6 @@
       auth_key: '{{auth_key}}'
       serial: '{{ serial_number }}'
       state: present
-      org_name: '{{org_name}}'
-      net_name: '{{net_name}}'
       vlan_id: '{{vlan_id}}'
       name: '{{vlan_name}}'
       subnet: '{{subnet}}'
