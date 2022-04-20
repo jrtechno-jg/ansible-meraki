@@ -16,7 +16,7 @@
     delegate_to: localhost
     register: create_vlan
     environment:
-      ANSIBLE_MERAKI_FORMAT: snake_case
+      ANSIBLE_MERAKI_FORMAT: snakecase
 
   - debug:
       msg: '{{create_vlan}}'
