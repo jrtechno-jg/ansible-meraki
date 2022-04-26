@@ -9,6 +9,7 @@
       state: present
       number: '{{ number }}'
       enabled: '{{ enabled }}'
+      poe_enabled: '{{ poe_enabled }}'
       type: '{{ type }}'
       vlan: '{{ vlan }}'
       allowed_vlans: '{{ allowed_vlans }}'
